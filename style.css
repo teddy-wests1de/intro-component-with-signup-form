@@ -24,7 +24,6 @@ body {
 
 .main {
   display: grid;
-
   grid-template-areas: "text-content" "form-content";
   margin: auto 1rem;
   min-width: 345px;
@@ -61,32 +60,81 @@ body {
   font-weight: 700;
 }
 .signup {
+  /* position: relative; */
   background-color: #fff;
   padding: 1rem 1.5rem;
   border-radius: 0.5rem;
   width: 100%;
 }
-.signup > * {
+.input-container > input[type="text"],
+input[type="email"],
+input[type="password"],
+button {
   display: block;
   width: 100%;
   padding: 1rem;
   border-style: solid;
   border-radius: 0.2rem;
-  outline: 0;
-  margin: 1rem 0;
   font-weight: 700;
   color: var(--grayish-blue);
+  outline: none;
 }
-.claim {
+/* input[type="text"]:focus {
+  border-color: var(--red);
+  box-shadow: 0 0 8px 0 var(--red);
+} */
+.input-container {
+  position: relative;
+  margin-bottom: 1rem;
+}
+.input-container.success input {
+  border: 1px solid black;
+  outline: none;
+}
+.input-container.error input {
+  border: 2px solid red;
+  box-shadow: 0 0 8px 0 var(--red);
+}
+.input-container [role="alert"] {
+  visibility: hidden;
+}
+.input-container.error [role="alert"] {
+  visibility: visible;
+}
+.input-container.error .icon {
+  visibility: visible;
+}
+.icon {
+  position: absolute;
+  padding: 0.75rem;
+  min-width: 40px;
+  right: 0;
+  visibility: hidden;
+}
+
+[role="alert"] {
+  margin: 0 0.5rem;
+  display: block;
+  /* width: 100%; */
+  text-align: right;
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--red);
+}
+#nameError.visible {
+  display: block;
+}
+/* .input.invalid {
+  border-color: red;
+} */
+.submit {
   background-color: var(--green);
   padding: 1rem;
   text-transform: uppercase;
   color: #fff;
   border-radius: 0.5rem;
   font-family: inherit;
-}
-span [role="alert"] {
-  display: none;
+  cursor: pointer;
 }
 .terms {
   border: none !important;

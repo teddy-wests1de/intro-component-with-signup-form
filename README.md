@@ -48,11 +48,11 @@ Users should be able to:
 ### What I learned
 
 ### Continued development
+- Learning to do Form Validation with pop-up error boxes relative to the input field.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Example resource 1](https://www.youtube.com/watch?v=rsd4FNGTRBw) - This helped me for adding the error class to the input parent element. I really liked this pattern and will use it going forward.
 
 ## Author
 
